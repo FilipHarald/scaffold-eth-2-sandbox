@@ -4,8 +4,44 @@ const contracts = {
       chainId: "31337",
       name: "localhost",
       contracts: {
-        GlobalUnitsSandbox: {
-          address: "0xa513E6E4b8f2a923D98304ec87F64353C4D5C853",
+        TypesSandbox: {
+          address: "0x0165878A594ca255338adfa4d48449f69242Eb8F",
+          abi: [
+            {
+              inputs: [
+                {
+                  internalType: "address",
+                  name: "_owner",
+                  type: "address",
+                },
+              ],
+              stateMutability: "nonpayable",
+              type: "constructor",
+            },
+            {
+              inputs: [],
+              name: "byteArrays",
+              outputs: [
+                {
+                  internalType: "bytes3",
+                  name: "",
+                  type: "bytes3",
+                },
+              ],
+              stateMutability: "view",
+              type: "function",
+            },
+            {
+              inputs: [],
+              name: "printTypeFunctions",
+              outputs: [],
+              stateMutability: "view",
+              type: "function",
+            },
+          ],
+        },
+        UnitsAndGlobalStuffSandbox: {
+          address: "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512",
           abi: [
             {
               inputs: [
