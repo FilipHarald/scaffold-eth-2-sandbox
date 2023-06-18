@@ -1,11 +1,13 @@
 import { HardhatRuntimeEnvironment } from "hardhat/types";
 import { DeployFunction } from "hardhat-deploy/types";
 
-const deploy: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
+const name = "UnitsAndGlobalStuffSandbox";
+
+const deployFunction: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
   const { deployer } = await hre.getNamedAccounts();
   const { deploy } = hre.deployments;
 
-  await deploy("PrimitivesSandbox", {
+  await deploy(name, {
     from: deployer,
     args: [deployer],
     log: true,
@@ -13,6 +15,6 @@ const deploy: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
   });
 };
 
-export default deploy;
+export default deployFunction;
 
-deploy.tags = ["PrimitivesSandbox", "sbx"];
+deployFunction.tags = [name, "sbx"];

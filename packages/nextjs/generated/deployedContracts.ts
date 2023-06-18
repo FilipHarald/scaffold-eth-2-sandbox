@@ -4,8 +4,8 @@ const contracts = {
       chainId: "31337",
       name: "localhost",
       contracts: {
-        PrimitivesSandbox: {
-          address: "0x8A791620dd6260079BF849Dc5567aDC3F2FdC318",
+        GlobalUnitsSandbox: {
+          address: "0xa513E6E4b8f2a923D98304ec87F64353C4D5C853",
           abi: [
             {
               inputs: [
@@ -20,21 +20,29 @@ const contracts = {
             },
             {
               inputs: [],
-              name: "assertionsAboutEtherUnits",
+              name: "errorHandling",
+              outputs: [],
+              stateMutability: "nonpayable",
+              type: "function",
+            },
+            {
+              inputs: [],
+              name: "etherUnits",
               outputs: [],
               stateMutability: "payable",
               type: "function",
             },
             {
               inputs: [],
-              name: "owner",
-              outputs: [
-                {
-                  internalType: "address",
-                  name: "",
-                  type: "address",
-                },
-              ],
+              name: "gasUnits",
+              outputs: [],
+              stateMutability: "view",
+              type: "function",
+            },
+            {
+              inputs: [],
+              name: "timeUnits",
+              outputs: [],
               stateMutability: "view",
               type: "function",
             },
