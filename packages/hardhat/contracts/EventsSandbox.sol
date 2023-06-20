@@ -11,7 +11,7 @@ contract EventsSandbox {
         console.log("Deploying a EventsSandbox with message:", _message);
     }
 
-    function test() public returns (string memory) {
+    function test() public {
         emit Log(msg.sender, "Hello World!");
         emit Log(msg.sender, "Hello EVM!");
         emit AnotherLog();
