@@ -4,8 +4,62 @@ const contracts = {
       chainId: "31337",
       name: "localhost",
       contracts: {
+        EventsSandbox: {
+          address: "0x2279B7A0a67DB372996a5FaB50D91eAA73d2eBe6",
+          abi: [
+            {
+              inputs: [
+                {
+                  internalType: "string",
+                  name: "_message",
+                  type: "string",
+                },
+              ],
+              stateMutability: "nonpayable",
+              type: "constructor",
+            },
+            {
+              anonymous: false,
+              inputs: [],
+              name: "AnotherLog",
+              type: "event",
+            },
+            {
+              anonymous: false,
+              inputs: [
+                {
+                  indexed: true,
+                  internalType: "address",
+                  name: "sender",
+                  type: "address",
+                },
+                {
+                  indexed: false,
+                  internalType: "string",
+                  name: "message",
+                  type: "string",
+                },
+              ],
+              name: "Log",
+              type: "event",
+            },
+            {
+              inputs: [],
+              name: "test",
+              outputs: [
+                {
+                  internalType: "string",
+                  name: "",
+                  type: "string",
+                },
+              ],
+              stateMutability: "nonpayable",
+              type: "function",
+            },
+          ],
+        },
         FunctionModifiersSandbox: {
-          address: "0xCf7Ed3AccA5a467e9e704C703E8D87F634fB0Fc9",
+          address: "0x0165878A594ca255338adfa4d48449f69242Eb8F",
           abi: [
             {
               inputs: [
