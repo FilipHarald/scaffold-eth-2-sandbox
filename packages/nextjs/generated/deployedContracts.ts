@@ -134,7 +134,7 @@ const contracts = {
           ],
         },
         InheritanceSandbox: {
-          address: "0xA51c1fc2f0D1a1b8494Ed1FE312d7C3a78Ed91C0",
+          address: "0xc6e7DF5E7b4f2A278906862b61205850344D4e7d",
           abi: [
             {
               inputs: [
@@ -233,6 +233,72 @@ const contracts = {
               name: "removeEntry",
               outputs: [],
               stateMutability: "nonpayable",
+              type: "function",
+            },
+          ],
+        },
+        ReceivingSandbox: {
+          address: "0x9E545E3C0baAB3E08CdfD552C960A1050f373042",
+          abi: [
+            {
+              inputs: [
+                {
+                  internalType: "address",
+                  name: "_owner",
+                  type: "address",
+                },
+              ],
+              stateMutability: "nonpayable",
+              type: "constructor",
+            },
+            {
+              stateMutability: "payable",
+              type: "fallback",
+            },
+            {
+              inputs: [],
+              name: "getBalance",
+              outputs: [
+                {
+                  internalType: "uint256",
+                  name: "",
+                  type: "uint256",
+                },
+              ],
+              stateMutability: "view",
+              type: "function",
+            },
+            {
+              stateMutability: "payable",
+              type: "receive",
+            },
+          ],
+        },
+        SendingEtherSandbox: {
+          address: "0x84eA74d481Ee0A5332c457a4d796187F6Ba67fEB",
+          abi: [
+            {
+              inputs: [
+                {
+                  internalType: "address",
+                  name: "_owner",
+                  type: "address",
+                },
+              ],
+              stateMutability: "nonpayable",
+              type: "constructor",
+            },
+            {
+              inputs: [
+                {
+                  internalType: "address payable",
+                  name: "_to",
+                  type: "address",
+                },
+              ],
+              name: "sendViaCall",
+              outputs: [],
+              stateMutability: "payable",
               type: "function",
             },
           ],
