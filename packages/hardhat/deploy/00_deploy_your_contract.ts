@@ -1,5 +1,6 @@
 import { HardhatRuntimeEnvironment } from "hardhat/types";
 import { DeployFunction } from "hardhat-deploy/types";
+import { scaffoldDeployWrapper } from "../utils";
 
 /**
  * Deploys a contract named "YourContract" using the deployer account and
@@ -35,8 +36,10 @@ const deployYourContract: DeployFunction = async function (hre: HardhatRuntimeEn
   // const yourContract = await hre.ethers.getContract("YourContract", deployer);
 };
 
-export default deployYourContract;
+const wrappedDeploy = scaffoldDeployWrapper(deployYourContract);
+
+export default wrappedDeploy;
 
 // Tags are useful if you have multiple deploy files and only want to run one of them.
 // e.g. yarn deploy --tags YourContract
-deployYourContract.tags = ["YourContract"];
+wrappedDeploy.tags = ["YourContract"];
