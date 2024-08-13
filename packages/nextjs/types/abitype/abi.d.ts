@@ -1,13 +1,9 @@
 import "abitype";
 
-declare module "viem/node_modules/abitype" {
-  export interface Config {
-    AddressType: string;
-  }
-}
+type AddressType = string;
 
 declare module "abitype" {
-  export interface Config {
-    AddressType: string;
+  export interface Register {
+    AddressType: AddressType;
   }
 }
