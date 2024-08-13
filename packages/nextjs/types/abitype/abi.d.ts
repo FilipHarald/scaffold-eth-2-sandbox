@@ -1,7 +1,9 @@
 import "abitype";
 
+type AddressType = string;
+
 declare module "abitype" {
-  export interface Config {
-    AddressType: string;
+  export interface Register {
+    AddressType: AddressType;
   }
 }
